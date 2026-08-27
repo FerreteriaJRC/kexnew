@@ -5,7 +5,7 @@
 
 .category-banner {
   margin-top: 50px;
-  background: #ff8533;
+  background: #c40000;
 }
 
 .category-banner-inner {
@@ -20,7 +20,7 @@
 
 .category-banner h1 {
   margin: 0;
-  color: #101010;
+  color: #ffffff;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: clamp(76px, 10vw, 150px);
   font-weight: 900;
@@ -31,7 +31,7 @@
 
 .category-banner p {
   margin: 0 8% 0 0;
-  color: #101010;
+  color: #ffffff;
   font-family: Arial, sans-serif;
   font-size: clamp(18px, 2vw, 29px);
   font-weight: 600;

@@ -6,9 +6,9 @@ const CATEGORY_DATA = {
     english: 'Abrasives',
     description: 'Soluciones de desbaste, corte y acabado para obtener superficies precisas y resultados consistentes en cada proceso.',
     images: [
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=85',
+      '/abrasivos/1.GRATA.COPA.acerolatonado.webp',
+      '/abrasivos/4.GRATA.CIRCULAR.webp',
+      '/abrasivos/9.LIMAS.webp',
     ],
   },
   accesorios: {
@@ -16,9 +16,9 @@ const CATEGORY_DATA = {
     english: 'Accessories',
     description: 'Accesorios profesionales para complementar equipos, optimizar operaciones y mantener cada estación de trabajo lista.',
     images: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85',
+      '/accesorios/1.CONOS.REDUCC..webp',
+      '/accesorios/4.PTO,GIRATORIO.PRECISION.TORNO.webp',
+      '/accesorios/8.PRENSA.COORDENADAS.webp',
     ],
   },
   corte: {
@@ -26,9 +26,9 @@ const CATEGORY_DATA = {
     english: 'Cutting tools',
     description: 'Herramientas de corte de alto desempeño para mecanizado, perforación y torneado con máxima precisión.',
     images: [
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1581093458791-9d42e3c6e3f5?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1565439395047-4f4f8a6b4a9e?auto=format&fit=crop&w=1200&q=85',
+      '/corte/1.BORCA CIL.TUNGS.TISIN.webp',
+      '/corte/5.BROCA.HELICOIDAL.HSS.webp',
+      '/corte/10.FRESAS.ROTATIVAS.webp',
     ],
   },
   maquinaria: {
@@ -36,9 +36,9 @@ const CATEGORY_DATA = {
     english: 'Industrial machinery',
     description: 'Maquinaria industrial para transformar metales con estabilidad, potencia y el control que exige cada proyecto.',
     images: [
-      'https://images.unsplash.com/photo-1565439395047-4f4f8a6b4a9e?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1581093458791-9d42e3c6e3f5?auto=format&fit=crop&w=1200&q=85',
+      '/maquinaria/1.WE-310.webp',
+      '/maquinaria/4.UE-916.webp',
+      '/maquinaria/8.TORNO.PARALELO.webp',
     ],
   },
   materiales: {
@@ -46,9 +46,9 @@ const CATEGORY_DATA = {
     english: 'Materials',
     description: 'Encuentra el mejor complemento para la industria metalmecánica. Plásticos de ingeniería para piezas competentes, resistentes y precisas.',
     images: [
-      'https://images.unsplash.com/photo-1605600659873-d808a13e4d2a?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85',
+      '/materiales/EMPACK.webp',
+      '/materiales/NYLON.webp',
+      '/materiales/TEFLON.webp',
     ],
   },
   medicion: {
@@ -56,9 +56,9 @@ const CATEGORY_DATA = {
     english: 'Measuring instruments',
     description: 'Instrumentos confiables para verificar dimensiones, tolerancias y calidad en cada etapa de fabricación.',
     images: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1581093458791-9d42e3c6e3f5?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1565439395047-4f4f8a6b4a9e?auto=format&fit=crop&w=1200&q=85',
+      '/medicion/1.CALIBRE DIGITAL.pie de rey.webp',
+      '/medicion/5.MICROMETRO DIGITAL. ext.webp',
+      '/medicion/9.RELOJ COMPARADOR.webp',
     ],
   },
   fluidos: {
@@ -66,9 +66,9 @@ const CATEGORY_DATA = {
     english: 'Cutting fluids',
     description: 'Refrigerantes y lubricantes para proteger herramientas, controlar temperatura y extender la vida útil del proceso.',
     images: [
-      'https://images.unsplash.com/photo-1581093458791-9d42e3c6e3f5?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1565439395047-4f4f8a6b4a9e?auto=format&fit=crop&w=1200&q=85',
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85',
+      '/fluidos/45HRC.webp',
+      '/fluidos/ALUMINIO.webp',
+      '/fluidos/H2Ox.webp',
     ],
   },
 }

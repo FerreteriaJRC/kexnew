@@ -34,7 +34,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand-column">
-          <img src="/images/logo.svg" alt="KEX Tools" />
+          <img className="footer-logo" src="/logo_kex.webp" alt="KEX Tools" />
           <p>Herramientas y maquinaria de precisión<br />para la industria profesional desde 1992.</p>
         </div>
 

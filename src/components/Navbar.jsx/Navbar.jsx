@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className="site-header">
       <div className="navbar-shell">
         <a href="/" className="brand" aria-label="KEX Tools, inicio">
-          <img src="/logo.svg" alt="KEX Tools" />
+          <img src="/logo_kex.webp" alt="KEX Tools" />
         </a>
 
         <nav className="desktop-nav" aria-label="Navegacion principal">
