@@ -1,0 +1,180 @@
+.why-kex {
+  position: relative;
+  overflow: hidden;
+  padding: 121px 0 156px;
+  background: #e7e7e7;
+}
+
+.why-kex-watermark {
+  position: absolute;
+  top: -44px;
+  right: 18%;
+  color: rgba(190, 190, 190, 0.24);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 345px;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -14px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.why-kex-layout {
+  position: relative;
+  z-index: 1;
+  width: min(850px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  gap: 62px;
+}
+
+.why-kex-copy {
+  text-align: left;
+}
+
+.why-kex .section-kicker {
+  margin-bottom: 23px;
+}
+
+.why-kex h2 {
+  margin: 0;
+  color: #090909;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 57px;
+  font-weight: 900;
+  line-height: 1.13;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.why-kex h2 em {
+  color: #bd0000;
+  font-style: normal;
+}
+
+.why-kex-description {
+  max-width: 480px;
+  margin-top: 29px;
+  color: #7a858f;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.why-kex-standards {
+  max-width: 480px;
+  margin-top: 37px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #b4b8bb;
+  font-family: Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.why-kex-standards span {
+  width: 167px;
+  height: 1px;
+  background: #c8c8c8;
+}
+
+.why-kex-standards strong {
+  font-weight: 400;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 23px;
+  align-content: start;
+}
+
+.benefit-card {
+  min-height: 214px;
+  box-sizing: border-box;
+  padding: 25px 24px 21px;
+  border: 1px solid #c2c2c2;
+  text-align: left;
+}
+
+.benefit-card svg {
+  width: 23px;
+  height: 23px;
+  margin-bottom: 17px;
+  fill: none;
+  stroke: #bd0000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.benefit-card h3 {
+  margin: 0;
+  color: #111;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.benefit-card p {
+  margin-top: 14px;
+  color: #7e8992;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .why-kex {
+    padding: 76px 0 90px;
+  }
+
+  .why-kex-watermark {
+    top: 12px;
+    right: -12%;
+    font-size: 210px;
+  }
+
+  .why-kex-layout {
+    width: calc(100% - 32px);
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .why-kex h2 {
+    font-size: clamp(45px, 14vw, 60px);
+  }
+
+  .why-kex-description {
+    font-size: 14px;
+  }
+
+  .why-kex-standards {
+    gap: 12px;
+    font-size: 9px;
+  }
+
+  .why-kex-standards span {
+    width: auto;
+    flex: 1;
+  }
+
+  .benefit-card {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    min-height: auto;
+  }
+}

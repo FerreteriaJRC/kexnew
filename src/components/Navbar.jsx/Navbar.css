@@ -1,0 +1,142 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #e9e9e9;
+  border-bottom: 1px solid #c9c9c9;
+  box-sizing: border-box;
+}
+
+.navbar-shell {
+  width: min(1192px, calc(100% - 48px));
+  height: 66px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  width: 90px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #999999;
+  text-decoration: none;
+  line-height: 0.75;
+  user-select: none;
+}
+
+.brand-name {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 35px;
+  font-style: italic;
+  letter-spacing: -2px;
+  transform: skew(-8deg);
+}
+
+.brand-tools {
+  margin-left: 20px;
+  color: #b40000;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transform: skew(-8deg);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  margin-left: auto;
+  margin-right: 257px;
+}
+
+.desktop-nav a,
+.mobile-menu a {
+  color: #686868;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.desktop-nav a:hover,
+.mobile-menu a:hover {
+  color: #b40000;
+}
+
+.quote-button {
+  width: 75px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  background: #b40000;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.quote-button:hover {
+  background: #920000;
+}
+
+.menu-button,
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navbar-shell {
+    width: calc(100% - 32px);
+    height: 66px;
+  }
+
+  .desktop-nav,
+  .navbar-shell > .quote-button {
+    display: none;
+  }
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+    padding: 9px 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-button span {
+    width: 26px;
+    height: 2px;
+    background: #686868;
+  }
+
+  .mobile-menu {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #d0d0d0;
+  }
+
+  .mobile-menu .quote-button {
+    margin-top: 2px;
+  }
+}
