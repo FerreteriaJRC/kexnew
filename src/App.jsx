@@ -23,9 +23,9 @@ function App() {
         <div className="hero-layout">
           <section className="hero-copy" aria-labelledby="hero-title">
             <h1 id="hero-title" className="hero-title">
-              PRECISIÓN
-              <span>SIN</span>
-              CONCESIONES.
+              CONFIABILIDAD
+              <span>ECONOMIA</span>
+              RESPALDO
             </h1>
             <p className="hero-description">
               Herramientas, maquinaria e instrumentos para empresas y técnicos
@@ -46,7 +46,7 @@ function App() {
 
         <div className="hero-stats" aria-label="Datos de KEX Tools">
           <div className="hero-stat">
-            <strong>32+</strong>
+            <strong>25+</strong>
             <span>Años en el mercado</span>
           </div>
           <div className="hero-stat">
@@ -64,7 +64,7 @@ function App() {
         </div>
       </main>
       <ProductLines />
-      <FeaturedProducts />
+      {/* <FeaturedProducts /> */}
       <WhyKex />
       <Industries />
       <TechnicalCta />

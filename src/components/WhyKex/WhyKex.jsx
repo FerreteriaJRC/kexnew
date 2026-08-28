@@ -47,7 +47,7 @@ export default function WhyKex() {
         <div className="why-kex-copy">
           <p className="section-kicker"><span /> ¿Por qué KEX?</p>
           <h2 id="why-kex-title">
-            32 años<br />de ingeniería<br /><em>aplicada.</em>
+            25 años<br />de ingeniería<br /><em>aplicada.</em>
           </h2>
           <p className="why-kex-description">
             Desde 1992, KEX ha equipado a los talleres y plantas industriales más exigentes de Latinoamérica con herramientas que cumplen especificaciones críticas de proceso. No vendemos productos. Resolvemos problemas de fabricación.
