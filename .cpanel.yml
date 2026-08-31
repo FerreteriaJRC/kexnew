@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/jrc/kex.com.co/
+    - /bin/cp -R $PWD/dist/* $DEPLOYPATH
