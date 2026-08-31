@@ -33,7 +33,7 @@ function App() {
               medición y transformación de metales.
             </p>
             <div className="hero-actions">
-              <a className="hero-primary-action" href="#catalogo">
+              <a className="hero-primary-action" href="/file/CATALOGOKEX.PAGINAWEB.pdf" download>
                 Ver catálogo <span aria-hidden="true">-&gt;</span>
               </a>
               <a className="hero-secondary-action" href="#contacto">

@@ -14,7 +14,7 @@ const BENEFITS = [
   {
     icon: 'award',
     title: 'Garantía industrial',
-    description: 'Garantía extendida de 24 meses sobre defectos de fabricación en toda la línea de maquinaria.',
+    description: 'Garantía de 6 meses sobre defectos de fabricación en todas las líneas de productos',
   },
   {
     icon: 'team',
@@ -50,7 +50,7 @@ export default function WhyKex() {
             25 años<br />de ingeniería<br /><em>aplicada.</em>
           </h2>
           <p className="why-kex-description">
-            Desde 1992, KEX ha equipado a los talleres y plantas industriales más exigentes de Latinoamérica con herramientas que cumplen especificaciones críticas de proceso. No vendemos productos. Resolvemos problemas de fabricación.
+            Iniciando siglo, KEX ha equipado a los talleres y plantas industriales más exigentes de Latinoamérica con herramientas que cumplen especificaciones críticas de proceso. No vendemos productos. Resolvemos problemas de fabricación.
           </p>
           <div className="why-kex-standards" aria-label="Certificaciones y estándares">
             <span />

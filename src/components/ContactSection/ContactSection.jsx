@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './ContactSection.css'
 
 const CONTACT_DETAILS = [
-  { icon: 'phone', label: 'Línea técnica', value: '' },
-  { icon: 'mail', label: 'Correo comercial', value: 'ventas@kex.com.co' },
+  { icon: 'phone', label: 'Línea técnica', value: '+57 317 4232645' },
+  { icon: 'mail', label: 'Correo comercial', value: 'ventas@kex.com.co', href: 'mailto:ventas@kex.com.co' },
   { icon: 'pin', label: 'Oficina central', value: '' },
 ]
 
@@ -22,6 +22,22 @@ export default function ContactSection() {
 
   function handleSubmit(event) {
     event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const name = formData.get('name')?.toString().trim() || 'Cliente'
+    const company = formData.get('company')?.toString().trim() || 'Sin empresa'
+    const email = formData.get('email')?.toString().trim() || ''
+    const message = formData.get('message')?.toString().trim() || ''
+
+    const subject = encodeURIComponent(`Consulta de ${name} - ${company}`)
+    const body = encodeURIComponent(
+      `Nombre completo: ${name}\n` +
+      `Empresa: ${company}\n` +
+      `Correo electrónico: ${email}\n\n` +
+      `Requerimiento / consulta:\n${message}`
+    )
+
+    window.location.href = `mailto:ventas@kex.com.co?subject=${subject}&body=${body}`
     setSent(true)
   }
 
@@ -43,7 +59,11 @@ export default function ContactSection() {
                 <span className="contact-icon"><ContactIcon type={detail.icon} /></span>
                 <div>
                   <span className="contact-label">{detail.label}</span>
-                  <span className="contact-value">{detail.value}</span>
+                  {detail.href ? (
+                    <a className="contact-value" href={detail.href}>{detail.value}</a>
+                  ) : (
+                    <span className="contact-value">{detail.value}</span>
+                  )}
                 </div>
               </div>
             ))}

@@ -9,6 +9,12 @@ const NAV_LINKS = [
   { label: "Contacto", href: "#contacto" },
 ];
 
+function getNavHref(href) {
+  if (typeof window === 'undefined') return href;
+
+  return window.location.pathname.startsWith('/categorias') ? `/${href}` : href;
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -23,14 +29,14 @@ export default function Navbar() {
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={getNavHref(link.href)}
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <a href="#contacto" className="quote-button">Cotizar</a>
+        <a href={getNavHref('#contacto')} className="quote-button">Cotizar</a>
 
         <button
           onClick={() => setOpen(!open)}
@@ -50,13 +56,13 @@ export default function Navbar() {
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={getNavHref(link.href)}
               onClick={() => setOpen(false)}
             >
               {link.label}
             </a>
           ))}
-          <a href="#contacto" className="quote-button">Cotizar</a>
+          <a href={getNavHref('#contacto')} className="quote-button" onClick={() => setOpen(false)}>Cotizar</a>
         </div>
       )}
     </header>

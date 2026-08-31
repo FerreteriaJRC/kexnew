@@ -23,7 +23,7 @@ const FOOTER_COLUMNS = [
   {
     title: 'Soporte',
     links: [
-      { label: 'Catálogo PDF', href: '/soporte/catalogo-pdf' },
+      { label: 'Catálogo PDF', href: '/file/CATALOGOKEX.PAGINAWEB.pdf', download: true },
       { label: 'Contacto', href: '#contacto' }
     ],
   },
@@ -35,14 +35,20 @@ export default function SiteFooter() {
       <div className="footer-main">
         <div className="footer-brand-column">
           <img className="footer-logo" src="/logo_kex.webp" alt="KEX Tools" />
-          <p>Herramientas y maquinaria de precisión<br />para la industria profesional desde 1992.</p>
+          <p>Herramientas y maquinaria de precisión<br />para la industria profesional desde inicio de siglo.</p>
         </div>
 
         {FOOTER_COLUMNS.map((column) => (
           <nav className="footer-column" key={column.title} aria-label={column.title}>
             <h2>{column.title}</h2>
             {column.links.map((link) => (
-              <a href={link.href || '#contacto'} key={link.label || link}>{link.label || link}</a>
+              <a
+                href={link.href || '#contacto'}
+                key={link.label || link}
+                download={link.download ? true : undefined}
+              >
+                {link.label || link}
+              </a>
             ))}
           </nav>
         ))}

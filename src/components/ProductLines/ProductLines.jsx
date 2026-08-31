@@ -54,7 +54,7 @@ export default function ProductLines() {
             <p className="section-kicker"><span /> Catálogo</p>
             <h2 id="product-lines-title">Líneas de<br />producto</h2>
           </div>
-          <a className="catalog-link" href="#catalogo-completo">
+          <a className="catalog-link" href="/file/CATALOGOKEX.PAGINAWEB.pdf" download>
             Ver catálogo completo <span aria-hidden="true">-&gt;</span>
           </a>
         </div>
