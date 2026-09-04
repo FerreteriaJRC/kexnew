@@ -26,7 +26,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$configPath = '/home/jrc/private/kex-mail.php';
+$configPath = '/home/jrc/_private/kex-mail.php';
 $config = file_exists($configPath) ? require $configPath : [];
 $apiKey = $config['RESEND_API_KEY'] ?? getenv('RESEND_API_KEY');
 $fromEmail = $config['RESEND_FROM_EMAIL'] ?? getenv('RESEND_FROM_EMAIL') ?: 'KEX Web <ventas@kex.com.co>';
