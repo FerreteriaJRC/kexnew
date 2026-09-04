@@ -18,27 +18,28 @@ function ContactIcon({ type }) {
 }
 
 export default function ContactSection() {
-  const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState('idle')
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
+    setStatus('sending')
 
     const formData = new FormData(event.currentTarget)
-    const name = formData.get('name')?.toString().trim() || 'Cliente'
-    const company = formData.get('company')?.toString().trim() || 'Sin empresa'
-    const email = formData.get('email')?.toString().trim() || ''
-    const message = formData.get('message')?.toString().trim() || ''
 
-    const subject = encodeURIComponent(`Consulta de ${name} - ${company}`)
-    const body = encodeURIComponent(
-      `Nombre completo: ${name}\n` +
-      `Empresa: ${company}\n` +
-      `Correo electrónico: ${email}\n\n` +
-      `Requerimiento / consulta:\n${message}`
-    )
+    try {
+      const response = await fetch('/api/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      })
 
-    window.location.href = `mailto:ventas@kex.com.co?subject=${subject}&body=${body}`
-    setSent(true)
+      if (!response.ok) throw new Error('No fue posible enviar la consulta')
+
+      event.currentTarget.reset()
+      setStatus('sent')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -89,9 +90,11 @@ export default function ContactSection() {
             Requerimiento / consulta
             <textarea name="message" placeholder="Describa su necesidad técnica o el producto que busca..." required />
           </label>
-          <button type="submit" className="contact-submit">
-            {sent ? 'Consulta enviada' : 'Enviar consulta'} <span aria-hidden="true">-&gt;</span>
+          <button type="submit" className="contact-submit" disabled={status === 'sending'}>
+            {status === 'sending' ? 'Enviando...' : status === 'sent' ? 'Consulta enviada' : 'Enviar consulta'} <span aria-hidden="true">-&gt;</span>
           </button>
+          {status === 'error' && <p role="alert" className="contact-form-message error">No pudimos enviar la consulta. Inténtalo de nuevo.</p>}
+          {status === 'sent' && <p role="status" className="contact-form-message success">Recibimos tu consulta. Te responderemos pronto.</p>}
         </form>
       </div>
     </section>
